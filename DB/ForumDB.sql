@@ -1,6 +1,6 @@
 /*==============================================================*/
 /* DBMS name:      MySQL 5.0                                    */
-/* Created on:     2018/1/26 16:11:30                           */
+/* Created on:     2018/1/26 17:25:19                           */
 /*==============================================================*/
 
 
@@ -33,7 +33,7 @@ create table Post
 (
    p_id                 integer(6) not null comment '帖子id',
    p_u_id               integer(6) not null comment '帖子所属用户ID',
-   p_content            varcahr(500) not null comment '帖子讨论内容',
+   p_content            varchar(500) not null comment '帖子讨论内容',
    p_pub_date           datetime not null comment '发布时间',
    primary key (p_id)
 );
