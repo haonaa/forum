@@ -34,7 +34,7 @@
 	</tx:advice>
 	<!-- advisor,pointcut+advice -->
 	<aop:config>
-		<aop:pointcut expression="execution(* wwq.biz.*.*(..))"
+		<aop:pointcut expression="execution(* forum.biz.*.*(..))"
 			id="pc" />
 		<aop:advisor advice-ref="txAdvice" pointcut-ref="pc" />
 
