@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated 2018-1-26 18:02:43 by Hibernate Tools 5.2.8.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class catalog="Forum" dynamic-insert="false" dynamic-update="false" mutable="true" name="forum.entity.Users" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="users">
+        <id name="UId" type="int">
+            <column name="u_id"/>
+            <generator class="assigned"/>
+        </id>
+        <property generated="never" lazy="false" name="UName" optimistic-lock="true" type="string" unique="false">
+            <column length="10" name="u_name" not-null="true">
+            </column>
+        </property>
+        <property generated="never" lazy="false" name="USex" optimistic-lock="true" type="int" unique="false">
+            <column name="u_sex" not-null="true">
+            </column>
+        </property>
+        <property generated="never" lazy="false" name="UProfile" optimistic-lock="true" type="string" unique="false">
+            <column length="500" name="u_profile">
+            </column>
+        </property>
+        <property generated="never" lazy="false" name="UAge" optimistic-lock="true" type="int" unique="false">
+            <column name="u_age" not-null="true">
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

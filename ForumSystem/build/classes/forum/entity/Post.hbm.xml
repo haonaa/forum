@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<!-- Generated 2018-1-26 18:02:43 by Hibernate Tools 5.2.8.Final -->
+<hibernate-mapping>
+
+<class
+    name="forum.entity.Post"
+    table="post"
+    catalog="Forum"
+    optimistic-lock="version"
+>
+
+	<id 
+        name="PId"
+        type="int"
+    >
+    
+<column name="p_id" />
+	    <generator class="assigned" />
+    </id>
+
+
+
+
+    <property
+        name="PUId"
+	    type="int"
+    >
+<column name="p_u_id" not-null="true" >
+</column>  </property>
+
+    <property
+        name="PContent"
+	    type="string"
+    >
+<column name="p_content" length="500" not-null="true" >
+</column>  </property>
+
+    <property
+        name="PPubDate"
+	    type="timestamp"
+    >
+<column name="p_pub_date" length="19" not-null="true" >
+</column>  </property>
+
+
+</class>
+
+</hibernate-mapping>
