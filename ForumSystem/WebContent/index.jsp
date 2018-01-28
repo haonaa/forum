@@ -11,6 +11,8 @@
 <body>
 	<h1>Test Successful !!</h1>
 	
-	
+	<h3 style="color: red;">
+		<s:property value="#session.emp.ename"></s:property>
+	</h3>
 </body>
 </html>
