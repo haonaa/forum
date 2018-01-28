@@ -4,16 +4,16 @@
 /*==============================================================*/
 
 
-drop table if exists forumsys.message;
+drop table if exists forum.message;
 
-drop table if exists forumsys.post;
+drop table if exists forum.post;
 
-drop table if exists forumsys.users;
+drop table if exists forum.users;
 
 /*==============================================================*/
 /* Table: Message                                               */
 /*==============================================================*/
-create table Message
+create table forum.message
 (
    m_id                 integer(10) not null,
    m_u_id               integer(6) not null,
@@ -27,7 +27,7 @@ create table Message
 /*==============================================================*/
 /* Table: Post                                                  */
 /*==============================================================*/
-create table Post
+create table forum.post
 (
    p_id                 integer(6) not null,
    p_u_id               integer(6) not null,
@@ -39,7 +39,7 @@ create table Post
 /*==============================================================*/
 /* Table: Users                                                 */
 /*==============================================================*/
-create table Users
+create table forum.users
 (
    u_id                 integer(6) not null,
    u_name               varchar(10) not null,
@@ -49,15 +49,15 @@ create table Users
    primary key (u_id)
 );
 
-alter table forumsys.message add constraint FK_Reference_2 foreign key (m_u_id)
-      references forumsys.users (u_id) on delete restrict on update restrict;
+alter table forum.message add constraint FK_Reference_2 foreign key (m_u_id)
+      references forum.users (u_id) on delete restrict on update restrict;
 
-alter table forumsys.message add constraint FK_Reference_3 foreign key (m_rep_id)
-      references forumsys.message (m_id) on delete restrict on update restrict;
+alter table forum.message add constraint FK_Reference_3 foreign key (m_rep_id)
+      references forum.message (m_id) on delete restrict on update restrict;
 
-alter table forumsys.message add constraint FK_Reference_4 foreign key (m_p_id)
-      references forumsys.post (p_id) on delete restrict on update restrict;
+alter table forum.message add constraint FK_Reference_4 foreign key (m_p_id)
+      references forum.post (p_id) on delete restrict on update restrict;
 
-alter table forumsys.post add constraint FK_Reference_1 foreign key (p_u_id)
-      references forumsys.users (u_id) on delete restrict on update restrict;
+alter table forum.post add constraint FK_Reference_1 foreign key (p_u_id)
+      references forum.users (u_id) on delete restrict on update restrict;
 
