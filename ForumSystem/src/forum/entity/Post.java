@@ -1,5 +1,5 @@
 package forum.entity;
-// Generated 2018-1-26 18:02:42 by Hibernate Tools 5.2.8.Final
+// Generated 2018-1-28 15:26:03 by Hibernate Tools 5.2.8.Final
 
 import java.util.Date;
 
@@ -8,51 +8,45 @@ import java.util.Date;
  */
 public class Post implements java.io.Serializable {
 
-	private int PId;
-	private int PUId;
-	private String PContent;
-	private Date PPubDate;
+	private int pid;
+	private int puid;
+	private String pcontent;
+	private Date ppubDate;
 
 	public Post() {
 	}
 
-	public Post(int PId, int PUId, String PContent, Date PPubDate) {
-		this.PId = PId;
-		this.PUId = PUId;
-		this.PContent = PContent;
-		this.PPubDate = PPubDate;
+	public int getPid() {
+		return pid;
 	}
 
-	public int getPId() {
-		return this.PId;
+	public void setPid(int pid) {
+		this.pid = pid;
 	}
 
-	public void setPId(int PId) {
-		this.PId = PId;
+	public int getPuid() {
+		return puid;
 	}
 
-	public int getPUId() {
-		return this.PUId;
+	public void setPuid(int puid) {
+		this.puid = puid;
 	}
 
-	public void setPUId(int PUId) {
-		this.PUId = PUId;
+	public String getPcontent() {
+		return pcontent;
 	}
 
-	public String getPContent() {
-		return this.PContent;
+	public void setPcontent(String pcontent) {
+		this.pcontent = pcontent;
 	}
 
-	public void setPContent(String PContent) {
-		this.PContent = PContent;
+	public Date getPpubDate() {
+		return ppubDate;
 	}
 
-	public Date getPPubDate() {
-		return this.PPubDate;
+	public void setPpubDate(Date ppubDate) {
+		this.ppubDate = ppubDate;
 	}
 
-	public void setPPubDate(Date PPubDate) {
-		this.PPubDate = PPubDate;
-	}
 
 }

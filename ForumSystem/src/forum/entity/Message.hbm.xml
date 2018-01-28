@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Generated 2018-1-26 18:02:43 by Hibernate Tools 5.2.8.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2018-1-28 15:26:03 by Hibernate Tools 5.2.8.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
     <class catalog="Forum" dynamic-insert="false" dynamic-update="false" mutable="true" name="forum.entity.Message" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="message">
-        <id name="MId" type="int">
+        <id name="mid" type="java.lang.Integer">
             <column name="m_id"/>
             <generator class="assigned"/>
         </id>
-        <property generated="never" lazy="false" name="MUId" optimistic-lock="true" type="int" unique="false">
+        <property generated="never" lazy="false" name="muid" optimistic-lock="true" type="java.lang.Integer" unique="false">
             <column name="m_u_id" not-null="true">
             </column>
         </property>
-        <property generated="never" lazy="false" name="MRepId" optimistic-lock="true" type="java.lang.Integer" unique="false">
+        <property generated="never" lazy="false" name="mrepid" optimistic-lock="true" type="java.lang.Integer" unique="false">
             <column name="m_rep_id">
             </column>
         </property>
-        <property generated="never" lazy="false" name="MPId" optimistic-lock="true" type="int" unique="false">
+        <property generated="never" lazy="false" name="mpid" optimistic-lock="true" type="java.lang.Integer" unique="false">
             <column name="m_p_id" not-null="true">
             </column>
         </property>
-        <property generated="never" lazy="false" name="MContent" optimistic-lock="true" type="string" unique="false">
+        <property generated="never" lazy="false" name="mcontent" optimistic-lock="true" type="string" unique="false">
             <column length="2000" name="m_content" not-null="true">
             </column>
         </property>
-        <property generated="never" lazy="false" name="MPubDate" optimistic-lock="true" type="timestamp" unique="false">
+        <property generated="never" lazy="false" name="mpubDate" optimistic-lock="true" type="timestamp" unique="false">
             <column length="19" name="m_pub_date" not-null="true">
             </column>
         </property>

@@ -1,5 +1,5 @@
 package forum.entity;
-// Generated 2018-1-26 18:02:42 by Hibernate Tools 5.2.8.Final
+// Generated 2018-1-28 15:26:03 by Hibernate Tools 5.2.8.Final
 
 import java.util.Date;
 
@@ -8,79 +8,63 @@ import java.util.Date;
  */
 public class Message implements java.io.Serializable {
 
-	private int MId;
-	private int MUId;
-	private Integer MRepId;
-	private int MPId;
-	private String MContent;
-	private Date MPubDate;
+	private Integer mid;
+	private Integer muid;
+	private Integer mrepid;
+	private Integer mpid;
+	private String mcontent;
+	private Date mpubdate;
 
 	public Message() {
 	}
 
-	public Message(int MId, int MUId, int MPId, String MContent, Date MPubDate) {
-		this.MId = MId;
-		this.MUId = MUId;
-		this.MPId = MPId;
-		this.MContent = MContent;
-		this.MPubDate = MPubDate;
+	public Integer getMid() {
+		return mid;
 	}
 
-	public Message(int MId, int MUId, Integer MRepId, int MPId, String MContent, Date MPubDate) {
-		this.MId = MId;
-		this.MUId = MUId;
-		this.MRepId = MRepId;
-		this.MPId = MPId;
-		this.MContent = MContent;
-		this.MPubDate = MPubDate;
+	public void setMid(Integer mid) {
+		this.mid = mid;
 	}
 
-	public int getMId() {
-		return this.MId;
+	public Integer getMuid() {
+		return muid;
 	}
 
-	public void setMId(int MId) {
-		this.MId = MId;
+	public void setMuid(Integer muid) {
+		this.muid = muid;
 	}
 
-	public int getMUId() {
-		return this.MUId;
+	public Integer getMrepid() {
+		return mrepid;
 	}
 
-	public void setMUId(int MUId) {
-		this.MUId = MUId;
+	public void setMrepid(Integer mrepid) {
+		this.mrepid = mrepid;
 	}
 
-	public Integer getMRepId() {
-		return this.MRepId;
+	public Integer getMpid() {
+		return mpid;
 	}
 
-	public void setMRepId(Integer MRepId) {
-		this.MRepId = MRepId;
+	public void setMpid(Integer mpid) {
+		this.mpid = mpid;
 	}
 
-	public int getMPId() {
-		return this.MPId;
+	public String getMcontent() {
+		return mcontent;
 	}
 
-	public void setMPId(int MPId) {
-		this.MPId = MPId;
+	public void setMcontent(String mcontent) {
+		this.mcontent = mcontent;
 	}
 
-	public String getMContent() {
-		return this.MContent;
+	public Date getMpubdate() {
+		return mpubdate;
 	}
 
-	public void setMContent(String MContent) {
-		this.MContent = MContent;
+	public void setMpubdate(Date mpubdate) {
+		this.mpubdate = mpubdate;
 	}
 
-	public Date getMPubDate() {
-		return this.MPubDate;
-	}
-
-	public void setMPubDate(Date MPubDate) {
-		this.MPubDate = MPubDate;
-	}
 
 }
