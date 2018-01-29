@@ -4,15 +4,16 @@ import java.util.List;
 
 import javax.annotation.Resource;
 
+import org.springframework.stereotype.Service;
 
 import forum.biz.IUsersBiz;
 import forum.dao.IUsersDao;
 import forum.entity.Users;
 
-@Resource
+@Service
 public class UsersBizImpl implements IUsersBiz{
-	
-	IUsersDao usersDao;
+	@Resource
+	private IUsersDao usersDao;
 	
 	public List<Users> findAll() throws Exception {
 		return usersDao.selectAll();

@@ -12,6 +12,7 @@ import forum.entity.Users;
 public class UsersAction extends ActionSupport{
 	@Resource
 	private IUsersBiz usersBiz;
+	
 	private Users users;
 	private List<Users> uList;
 	
