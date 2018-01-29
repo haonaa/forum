@@ -2,7 +2,7 @@
 <!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.org/dtd/hibernate-reverse-engineering-3.0.dtd" >
 
 <hibernate-reverse-engineering>
-  <table-filter match-catalog="Forum" match-name="message"/>
-  <table-filter match-catalog="Forum" match-name="post"/>
-  <table-filter match-catalog="Forum" match-name="users"/>
+	<table-filter match-name="message" match-catalog="Forum"></table-filter>
+	<table-filter match-name="users" match-catalog="Forum"></table-filter>
+	<table-filter match-name="post" match-catalog="Forum"></table-filter>
 </hibernate-reverse-engineering>

@@ -23,8 +23,8 @@
 
 	
 
-		<action name="*_*" class="wwq.web.{1}Action" method="{2}">
-			<result type="redirect" name="success">/index.jsp</result>
+		<action name="*_*" class="forum.web.{1}Action" method="{2}">
+			<result  name="success">/index.jsp</result>
 		</action>
 
 	

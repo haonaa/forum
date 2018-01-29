@@ -1,26 +1,34 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Generated 2018-1-28 15:26:03 by Hibernate Tools 5.2.8.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2018-1-29 15:42:20 by Hibernate Tools 5.2.8.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
-    <class catalog="Forum" dynamic-insert="false" dynamic-update="false" mutable="true" name="forum.entity.Users" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="users">
+    <class catalog="forum" dynamic-insert="false" dynamic-update="false" mutable="true" name="forum.entity.Users" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="users">
         <id name="uid" type="java.lang.Integer">
             <column name="u_id"/>
             <generator class="assigned"/>
         </id>
         <property generated="never" lazy="false" name="uname" optimistic-lock="true" type="string" unique="false">
-            <column length="10" name="u_name" not-null="true">
-            </column>
+            <column length="10" name="u_name" not-null="true"/>
         </property>
         <property generated="never" lazy="false" name="usex" optimistic-lock="true" type="java.lang.Integer" unique="false">
-            <column name="u_sex" not-null="true">
-            </column>
+            <column name="u_sex" not-null="true"/>
         </property>
         <property generated="never" lazy="false" name="uprofile" optimistic-lock="true" type="string" unique="false">
-            <column length="500" name="u_profile">
-            </column>
+            <column length="500" name="u_profile"/>
         </property>
         <property generated="never" lazy="false" name="uage" optimistic-lock="true" type="java.lang.Integer" unique="false">
-            <column name="u_age" not-null="true">
-            </column>
+            <column name="u_age" not-null="true"/>
         </property>
+        <set embed-xml="true" fetch="select" inverse="true" lazy="true" mutable="true" name="messages" optimistic-lock="true" sort="unsorted" table="message">
+            <key on-delete="noaction">
+                <column name="m_u_id" not-null="true"/>
+            </key>
+            <one-to-many class="forum.entity.Message" embed-xml="true" not-found="exception"/>
+        </set>
+        <set embed-xml="true" fetch="select" inverse="true" lazy="true" mutable="true" name="posts" optimistic-lock="true" sort="unsorted" table="post">
+            <key on-delete="noaction">
+                <column name="p_u_id" not-null="true"/>
+            </key>
+            <one-to-many class="forum.entity.Post" embed-xml="true" not-found="exception"/>
+        </set>
     </class>
 </hibernate-mapping>

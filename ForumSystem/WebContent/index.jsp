@@ -12,7 +12,8 @@
 	<h1>Test Successful !!</h1>
 	
 	<h3 style="color: red;">
-		<s:property value="#session.emp.ename"></s:property>
+		<s:property value="post.pcontent"></s:property>
 	</h3>
+	<s:debug></s:debug>
 </body>
 </html>
