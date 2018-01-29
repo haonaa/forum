@@ -7,8 +7,6 @@
 	</configSuffixes>
 	<enableImports><![CDATA[false]]></enableImports>
 	<configs>
-		<config>WebContent/ac.xml</config>
-		<config>WebContent/ac1.xml</config>
 	</configs>
 	<autoconfigs>
 		<config>src/ac.xml</config>

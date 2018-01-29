@@ -17,7 +17,7 @@
 		</property>
 	</bean>
 
-	<bean id="ht" class="org.springframework.orm.hibernate3.HibernateTemplate">
+	<bean id="hibernateTemplate" class="org.springframework.orm.hibernate3.HibernateTemplate">
 		<property name="sessionFactory" ref="sessionFactory"></property>
 	</bean>
 	<!-- 事务管理器 -->
@@ -28,8 +28,8 @@
 	<!-- txAdvice -->
 	<tx:advice transaction-manager="txManager" id="txAdvice">
 		<tx:attributes>
-			<tx:method name="find*" propagation="SUPPORTS" />
-			<tx:method name="*" propagation="REQUIRED" />
+			<tx:method name="find*" propagation="SUPPORTS" read-only="true" />
+			<tx:method name="*"/>
 		</tx:attributes>
 	</tx:advice>
 	<!-- advisor,pointcut+advice -->
