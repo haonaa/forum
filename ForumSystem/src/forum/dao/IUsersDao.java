@@ -4,7 +4,7 @@ import java.util.List;
 
 import forum.entity.Users;
 
-public interface IusersDao {
+public interface IUsersDao {
 	
 	List<Users> selectAll() throws Exception;
 	

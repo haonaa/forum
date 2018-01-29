@@ -4,7 +4,7 @@ import java.util.List;
 
 import forum.entity.Users;
 
-public interface IusersBiz {
+public interface IUsersBiz {
 	
 	List<Users> findAll() throws Exception;
 	

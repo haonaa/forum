@@ -6,12 +6,12 @@ import javax.annotation.Resource;
 
 import com.opensymphony.xwork2.ActionSupport;
 
-import forum.biz.IusersBiz;
+import forum.biz.IUsersBiz;
 import forum.entity.Users;
 
 public class UsersAction extends ActionSupport{
 	@Resource
-	private IusersBiz iusersBiz;
+	private IUsersBiz usersBiz;
 	private Users users;
 	private List<Users> uList;
 	
@@ -32,27 +32,27 @@ public class UsersAction extends ActionSupport{
 	}
 
 	public String findAll() throws Exception {
-		uList = iusersBiz.findAll();
+		uList = usersBiz.findAll();
 		return SUCCESS;
 	}
 	
 	public String add() throws Exception {
-		iusersBiz.add(users);
+		usersBiz.add(users);
 		return SUCCESS;
 	}
 	
 	public String delete() throws Exception {
-		iusersBiz.remove(users);
+		usersBiz.remove(users);
 		return SUCCESS;
 	}
 	
 	public String update() throws Exception {
-		iusersBiz.update(users);
+		usersBiz.update(users);
 		return SUCCESS;
 	}
 	
 	public String findById() throws Exception{
-		users = iusersBiz.findById(users.getUid());
+		users = usersBiz.findById(users.getUid());
 		return SUCCESS;
 	}
 

@@ -2,35 +2,36 @@ package forum.biz.impl;
 
 import java.util.List;
 
-import org.springframework.stereotype.Repository;
+import javax.annotation.Resource;
 
-import forum.biz.IusersBiz;
-import forum.dao.IusersDao;
+
+import forum.biz.IUsersBiz;
+import forum.dao.IUsersDao;
 import forum.entity.Users;
 
-@Repository
-public class UsersBizImpl implements IusersBiz{
+@Resource
+public class UsersBizImpl implements IUsersBiz{
 	
-	IusersDao iusersDao;
+	IUsersDao usersDao;
 	
 	public List<Users> findAll() throws Exception {
-		return iusersDao.selectAll();
+		return usersDao.selectAll();
 	}
 
 	public void add(Users users) throws Exception {
-		iusersDao.insert(users);
+		usersDao.insert(users);
 	}
 
 	public void remove(Users users) throws Exception {
-		iusersDao.delete(users);
+		usersDao.delete(users);
 	}
 
 	public void update(Users users) throws Exception {
-		iusersDao.update(users);
+		usersDao.update(users);
 	}
 
 	public Users findById(int id) throws Exception {
-		return iusersDao.selectById(id);
+		return usersDao.selectById(id);
 	}
 
 }

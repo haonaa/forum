@@ -2,16 +2,19 @@ package forum.dao.impl;
 
 import java.util.List;
 
-import javax.annotation.Resource;
 
 import org.hibernate.criterion.DetachedCriteria;
 import org.springframework.stereotype.Repository;
 
-import forum.dao.IusersDao;
+import forum.dao.IUsersDao;
 import forum.entity.Users;
 
 @Repository
+<<<<<<< HEAD
 public class UsersDaoImpl extends BaseDao implements IusersDao {
+=======
+public class UsersDaoImpl extends BaseDao implements IUsersDao {
+>>>>>>> 362a4d2036cc52a4fe620dae3156800df523944b
 
 	public List<Users> selectAll() throws Exception {
 		DetachedCriteria criteria=DetachedCriteria.forClass(Users.class);
