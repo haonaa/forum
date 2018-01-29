@@ -5,11 +5,12 @@ import java.util.List;
 import javax.annotation.Resource;
 
 import org.hibernate.criterion.DetachedCriteria;
+import org.springframework.stereotype.Repository;
 
 import forum.dao.IusersDao;
 import forum.entity.Users;
 
-@Resource
+@Repository
 public class UsersDaoImpl extends BaseDao implements IusersDao {
 
 	public List<Users> selectAll() throws Exception {
