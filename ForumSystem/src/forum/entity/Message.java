@@ -13,7 +13,7 @@ public class Message implements java.io.Serializable {
 	private Integer mrepid;
 	private Integer mpid;
 	private String mcontent;
-	private Date mpubdate;
+	private Date mpubDate;
 
 	public Message() {
 	}
@@ -58,13 +58,14 @@ public class Message implements java.io.Serializable {
 		this.mcontent = mcontent;
 	}
 
-	public Date getMpubdate() {
-		return mpubdate;
+	public Date getMpubDate() {
+		return mpubDate;
 	}
 
-	public void setMpubdate(Date mpubdate) {
-		this.mpubdate = mpubdate;
+	public void setMpubDate(Date mpubDate) {
+		this.mpubDate = mpubDate;
 	}
+
 
 
 }

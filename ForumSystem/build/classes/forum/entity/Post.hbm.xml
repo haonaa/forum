@@ -14,7 +14,7 @@
             <column length="500" name="p_content" not-null="true">
             </column>
         </property>
-        <property generated="never" lazy="false" name="ppubdate" optimistic-lock="true" type="timestamp" unique="false">
+        <property generated="never" lazy="false" name="ppubDate" optimistic-lock="true" type="timestamp" unique="false">
             <column length="19" name="p_pub_date" not-null="true">
             </column>
         </property>

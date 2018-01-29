@@ -9,7 +9,7 @@
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.1.xsd
 		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.1.xsd">
 
-	<context:component-scan base-package="wwq.biz.impl,wwq.dao.impl"></context:component-scan>
+	<context:component-scan base-package="forum.biz.impl,forum.dao.impl"></context:component-scan>
 
 	<bean id="sessionFactory"
 		class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
@@ -17,7 +17,7 @@
 		</property>
 	</bean>
 
-	<bean id="ht" class="org.springframework.orm.hibernate3.HibernateTemplate">
+	<bean id="hibernateTemplate" class="org.springframework.orm.hibernate3.HibernateTemplate">
 		<property name="sessionFactory" ref="sessionFactory"></property>
 	</bean>
 	<!-- 事务管理器 -->
@@ -34,7 +34,7 @@
 	</tx:advice>
 	<!-- advisor,pointcut+advice -->
 	<aop:config>
-		<aop:pointcut expression="execution(* wwq.biz.*.*(..))"
+		<aop:pointcut expression="execution(* forum.biz.*.*(..))"
 			id="pc" />
 		<aop:advisor advice-ref="txAdvice" pointcut-ref="pc" />
 
