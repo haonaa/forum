@@ -8,27 +8,27 @@ import java.util.Date;
  */
 public class Post implements java.io.Serializable {
 
-	private int pid;
-	private int puid;
+	private Integer pid;
+	private Integer puid;
 	private String pcontent;
 	private Date ppubDate;
 
 	public Post() {
 	}
 
-	public int getPid() {
+	public Integer getPid() {
 		return pid;
 	}
 
-	public void setPid(int pid) {
+	public void setPid(Integer pid) {
 		this.pid = pid;
 	}
 
-	public int getPuid() {
+	public Integer getPuid() {
 		return puid;
 	}
 
-	public void setPuid(int puid) {
+	public void setPuid(Integer puid) {
 		this.puid = puid;
 	}
 

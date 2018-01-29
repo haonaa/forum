@@ -6,20 +6,20 @@ package forum.entity;
  */
 public class Users implements java.io.Serializable {
 
-	private int uid;
+	private Integer uid;
 	private String uname;
-	private int usex;
+	private Integer usex;
 	private String uprofile;
-	private int uage;
+	private Integer uage;
 
 	public Users() {
 	}
 
-	public int getUid() {
+	public Integer getUid() {
 		return uid;
 	}
 
-	public void setUid(int uid) {
+	public void setUid(Integer uid) {
 		this.uid = uid;
 	}
 
@@ -31,11 +31,11 @@ public class Users implements java.io.Serializable {
 		this.uname = uname;
 	}
 
-	public int getUsex() {
+	public Integer getUsex() {
 		return usex;
 	}
 
-	public void setUsex(int usex) {
+	public void setUsex(Integer usex) {
 		this.usex = usex;
 	}
 
@@ -47,11 +47,11 @@ public class Users implements java.io.Serializable {
 		this.uprofile = uprofile;
 	}
 
-	public int getUage() {
+	public Integer getUage() {
 		return uage;
 	}
 
-	public void setUage(int uage) {
+	public void setUage(Integer uage) {
 		this.uage = uage;
 	}
 
