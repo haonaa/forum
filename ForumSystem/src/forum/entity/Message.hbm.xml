@@ -1,30 +1,31 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Generated 2018-1-28 15:26:03 by Hibernate Tools 5.2.8.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2018-1-29 15:42:20 by Hibernate Tools 5.2.8.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
-    <class catalog="Forum" dynamic-insert="false" dynamic-update="false" mutable="true" name="forum.entity.Message" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="message">
+    <class catalog="forum" dynamic-insert="false" dynamic-update="false" mutable="true" name="forum.entity.Message" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="message">
         <id name="mid" type="java.lang.Integer">
             <column name="m_id"/>
             <generator class="assigned"/>
         </id>
-        <property generated="never" lazy="false" name="muid" optimistic-lock="true" type="java.lang.Integer" unique="false">
-            <column name="m_u_id" not-null="true">
-            </column>
-        </property>
-        <property generated="never" lazy="false" name="mrepid" optimistic-lock="true" type="java.lang.Integer" unique="false">
-            <column name="m_rep_id">
-            </column>
-        </property>
-        <property generated="never" lazy="false" name="mpid" optimistic-lock="true" type="java.lang.Integer" unique="false">
-            <column name="m_p_id" not-null="true">
-            </column>
-        </property>
+        <many-to-one class="forum.entity.Message" embed-xml="true" fetch="select" insert="true" name="message" not-found="exception" optimistic-lock="true" unique="false" update="true">
+            <column name="m_rep_id"/>
+        </many-to-one>
+        <many-to-one class="forum.entity.Post" embed-xml="true" fetch="select" insert="true" name="post" not-found="exception" optimistic-lock="true" unique="false" update="true">
+            <column name="m_p_id" not-null="true"/>
+        </many-to-one>
+        <many-to-one class="forum.entity.Users" embed-xml="true" fetch="select" insert="true" name="users" not-found="exception" optimistic-lock="true" unique="false" update="true">
+            <column name="m_u_id" not-null="true"/>
+        </many-to-one>
         <property generated="never" lazy="false" name="mcontent" optimistic-lock="true" type="string" unique="false">
-            <column length="2000" name="m_content" not-null="true">
-            </column>
+            <column length="2000" name="m_content" not-null="true"/>
         </property>
         <property generated="never" lazy="false" name="mpubDate" optimistic-lock="true" type="timestamp" unique="false">
-            <column length="19" name="m_pub_date" not-null="true">
-            </column>
+            <column length="19" name="m_pub_date" not-null="true"/>
         </property>
+        <set embed-xml="true" fetch="select" inverse="true" lazy="true" mutable="true" name="messages" optimistic-lock="true" sort="unsorted" table="message">
+            <key on-delete="noaction">
+                <column name="m_rep_id"/>
+            </key>
+            <one-to-many class="forum.entity.Message" embed-xml="true" not-found="exception"/>
+        </set>
     </class>
 </hibernate-mapping>
