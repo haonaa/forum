@@ -14,8 +14,9 @@ public class UsersAction extends ActionSupport{
 	private IUsersBiz usersBiz;
 	
 	private Users users;
-	private List<Users> uList;
+	private List<Users> userList;
 	
+
 	public Users getUsers() {
 		return users;
 	}
@@ -24,16 +25,16 @@ public class UsersAction extends ActionSupport{
 		this.users = users;
 	}
 
-	public List<Users> getuList() {
-		return uList;
+	public List<Users> getUserList() {
+		return userList;
 	}
 
-	public void setuList(List<Users> uList) {
-		this.uList = uList;
+	public void setUserList(List<Users> userList) {
+		this.userList = userList;
 	}
 
-	public String findAll() throws Exception {
-		uList = usersBiz.findAll();
+	public String findall() throws Exception {
+		userList = usersBiz.findAll();
 		return SUCCESS;
 	}
 	

@@ -22,7 +22,7 @@
 				result="error" />
 		</global-exception-mappings>
 
-		<action name="findUsers" class="forum.web.UsersAction" method="findAll">
+		<action name="findUsers" class="forum.web.UsersAction" method="findall">
 			<result>/index.jsp</result>
 		</action>
 
