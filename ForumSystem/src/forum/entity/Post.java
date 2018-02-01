@@ -1,5 +1,5 @@
 package forum.entity;
-// Generated 2018-1-28 15:26:03 by Hibernate Tools 5.2.8.Final
+// Generated 2018-1-30 11:11:17 by Hibernate Tools 3.5.0.Final
 
 import java.util.Date;
 
@@ -8,47 +8,51 @@ import java.util.Date;
  */
 public class Post implements java.io.Serializable {
 
-	private Integer pid;
-	private Integer puid;
+	private int pid;
+	private int puid;
 	private String pcontent;
-	private Date ppubDate;
+	private Date ppubdate;
 
 	public Post() {
 	}
 
-	public Integer getPid() {
-		return pid;
+	public Post(int pid, int puid, String pcontent, Date ppubdate) {
+		this.pid = pid;
+		this.puid = puid;
+		this.pcontent = pcontent;
+		this.ppubdate = ppubdate;
 	}
 
-	public void setPid(Integer pid) {
+	public int getpid() {
+		return this.pid;
+	}
+
+	public void setpid(int pid) {
 		this.pid = pid;
 	}
 
-	public Integer getPuid() {
-		return puid;
+	public int getpuid() {
+		return this.puid;
 	}
 
-	public void setPuid(Integer puid) {
+	public void setpuid(int puid) {
 		this.puid = puid;
 	}
 
-	public String getPcontent() {
-		return pcontent;
+	public String getpcontent() {
+		return this.pcontent;
 	}
 
-	public void setPcontent(String pcontent) {
+	public void setpcontent(String pcontent) {
 		this.pcontent = pcontent;
 	}
 
-	public Date getPpubDate() {
-		return ppubDate;
+	public Date getppubdate() {
+		return this.ppubdate;
 	}
 
-	public void setPpubDate(Date ppubDate) {
-		this.ppubDate = ppubDate;
+	public void setppubdate(Date ppubdate) {
+		this.ppubdate = ppubdate;
 	}
-
-
-
 
 }

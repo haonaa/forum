@@ -1,5 +1,5 @@
 package forum.entity;
-// Generated 2018-1-28 15:26:03 by Hibernate Tools 5.2.8.Final
+// Generated 2018-1-30 11:11:17 by Hibernate Tools 3.5.0.Final
 
 import java.util.Date;
 
@@ -8,64 +8,79 @@ import java.util.Date;
  */
 public class Message implements java.io.Serializable {
 
-	private Integer mid;
-	private Integer muid;
+	private int mid;
+	private int muid;
 	private Integer mrepid;
-	private Integer mpid;
+	private int mpid;
 	private String mcontent;
-	private Date mpubDate;
+	private Date mpubdate;
 
 	public Message() {
 	}
 
-	public Integer getMid() {
-		return mid;
+	public Message(int mid, int muid, int mpid, String mcontent, Date mpubdate) {
+		this.mid = mid;
+		this.muid = muid;
+		this.mpid = mpid;
+		this.mcontent = mcontent;
+		this.mpubdate = mpubdate;
 	}
 
-	public void setMid(Integer mid) {
+	public Message(int mid, int muid, Integer mrepid, int mpid, String mcontent, Date mpubdate) {
+		this.mid = mid;
+		this.muid = muid;
+		this.mrepid = mrepid;
+		this.mpid = mpid;
+		this.mcontent = mcontent;
+		this.mpubdate = mpubdate;
+	}
+
+	public int getmid() {
+		return this.mid;
+	}
+
+	public void setmid(int mid) {
 		this.mid = mid;
 	}
 
-	public Integer getMuid() {
-		return muid;
+	public int getmuid() {
+		return this.muid;
 	}
 
-	public void setMuid(Integer muid) {
+	public void setmuid(int muid) {
 		this.muid = muid;
 	}
 
-	public Integer getMrepid() {
-		return mrepid;
+	public Integer getmrepid() {
+		return this.mrepid;
 	}
 
-	public void setMrepid(Integer mrepid) {
+	public void setmrepid(Integer mrepid) {
 		this.mrepid = mrepid;
 	}
 
-	public Integer getMpid() {
-		return mpid;
+	public int getmpid() {
+		return this.mpid;
 	}
 
-	public void setMpid(Integer mpid) {
+	public void setmpid(int mpid) {
 		this.mpid = mpid;
 	}
 
-	public String getMcontent() {
-		return mcontent;
+	public String getmcontent() {
+		return this.mcontent;
 	}
 
-	public void setMcontent(String mcontent) {
+	public void setmcontent(String mcontent) {
 		this.mcontent = mcontent;
 	}
 
-	public Date getMpubDate() {
-		return mpubDate;
+	public Date getmpubdate() {
+		return this.mpubdate;
 	}
 
-	public void setMpubDate(Date mpubDate) {
-		this.mpubDate = mpubDate;
+	public void setmpubdate(Date mpubdate) {
+		this.mpubdate = mpubdate;
 	}
-
-
 
 }
