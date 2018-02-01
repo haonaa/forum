@@ -23,11 +23,13 @@
 
 	
 
-		<action name="*_*" class="forum.web.{1}Action" method="{2}">
+		<!-- <action name="*_*" class="forum.web.{1}Action" method="{2}">
 			<result  name="success">/index.jsp</result>
-		</action>
+		</action> -->
 
-	
+		<action name="Post_createPost" class="forum.web.PostAction" method="createPost">
+			<result name="success">/home.jsp</result>
+		</action>
 
 
 	</package>
